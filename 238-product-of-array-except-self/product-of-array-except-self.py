@@ -7,8 +7,7 @@ class Solution:
             lp[i] = lp[i-1] * nums[i]
         for i in range(n-2,-1,-1):
             rp[i] = rp[i +1] * nums[i]
-        print(lp)
-        print(rp)
+    
         ans = [1] * len(nums)
         ans[0] = rp[1]
         ans[-1] = lp[-2]
